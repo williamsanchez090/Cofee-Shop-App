@@ -1,0 +1,28 @@
+body{
+padding-top:80px;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+background-image: url(../img/cofee.gif);
+background-repeat: no-repeat;
+background-size: cover;
+font-size: xx-large;
+font-weight: 700;
+color: #bf8aff;
+}
+img{
+height: 200px;
+}
+
+#run {
+    background-image: url(../img/art.jpg);
+    background-repeat:no-repeat ;
+    height: 120vh;
+}
+#wes {
+    background-image: url(../img/art.jpg);
+    background-repeat:no-repeat ;
+    height: 120vh;
+    color: mediumaquamarine;
+}

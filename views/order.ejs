@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Welcome to El Cafe!</h1>
+    <h4>Please submit an order.</h4>
+    <a href="/index" class="">Login or Sign-Up</a>
+
+    <form action="/newOrder" method="POST">
+        <label for="name">Customer Name:</label>
+        <input type="text" placeholder="Customer Name" name="name">
+        <label for="coffee">Coffee Choice:</label>
+        <!-- Come back and replace values with coffee names & regions -->
+        <select name="coffee">
+            <option value="brazilian">Brazilian</option>
+            <option value="colombian">Colombian</option>
+            <option value="costa rican">Costa Rican</option>
+            <option value="jamaican">Jamaican</option>
+            <option value="ethiopian">Ethiopian</option>
+            <option value="haitian">Haitian</option>
+        </select>
+        <label for="size">Size:</label>
+        <select name="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+        <label for="temp">Hot or Cold?</label>
+        <select name="temp">
+            <option value="hot">Hot</option>
+            <option value="cold">Cold</option>
+        </select>
+        <label for="cream">Cream?</label>
+        <select name="cream">
+            <option value="none">None</option>
+            <option value="dairy">Regular</option>
+            <option value="almond">Almond</option>
+            <option value="soy">Soy</option>
+        </select>
+        <label for="flavor">Add flavor?</label>
+        <select name="flavor">
+            <option value="none">None</option>
+            <option value="French Vanilla">French Vanilla</option>
+            <option value="Hazelnut">Hazelnut</option>
+            <option value="Caramel">Caramel</option>
+            <option value="Mocha">Mocha</option>
+        </select>
+        <button type="submit">Submit Order</button>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>

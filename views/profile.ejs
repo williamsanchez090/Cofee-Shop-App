@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- Main Profile Page -->
+  <title>El Cafe</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <script src="https://kit.fontawesome.com/265ed8ed5a.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Kannada&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="profile">
+  <div id="wes" class="container custTwo well will">
+
+    <div class="page-header text-center">
+      <h1 class="title"><i class="fa-solid fa-cup-togo"></i>Cafe Orders</h1>
+      <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+
+        <% if (user.local.email) { %>
+      </div>
+      <div class="col-md-6">
+        <h2>Pending Orders</h2>
+        <h1><%= user.local.email %></h1>
+        <% for (let i = 0; i < orders.length; i++) {%>
+          <section id="<%=orders[i]._id%>">
+            <span>#<%=i+1%></span>
+            <h3><%=orders[i].name%></h3>
+            <h4><%=orders[i].coffee%></h4>
+            <span><%=orders[i].size%></span>
+            <span><%=orders[i].temp%></span>
+            <span><%=orders[i].cream%></span>
+            <span><%=orders[i].flavor%></span>
+            <span><%=orders[i].completed%></span>
+            <span><i class="fa-solid fa-circle-check"></i></span>
+            <span><i class="fa fa-ban" aria-hidden="true"></i></span>
+          </section>
+        <%}%>
+      </div>
+    </div>
+
+    <% } %>
+    <!-- <div class="row">
+            LOCAL INFORMATION
+            <div class="col-sm-6">
+
+              <h3><span class="fa fa-user"></span> Local</h3>
+      
+              <% if (user.local.email) { %>
+                <p>
+                  <strong>id</strong>: <%= user._id %><br>
+                    <strong>email</strong>: <span class="userEmail"><%= user.local.email %></span><br>
+                      <strong>password</strong>: <%= user.local.password %>
+                </p>
+      
+                <a href="/unlink/local" class="btn btn-default">Delete Account</a>
+                <% } else { %>
+                  <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                  <% } %>
+            </div>
+            <div class="col-sm-6">
+              <h1>Finished Orders</h1>
+              <% for (let i = 0; i < done.length; i++) {%>
+                <section id="<%=done[i]._id%>">
+                  <span>#<%=i+1%></span>
+                  <h3><%=done[i].barista%> completed: <%=done[i].name%>'s order</h3>
+                  <h4><%=done[i].coffee%></h4>
+                  <span><%=done[i].size%></span>
+                  <span><%=done[i].temp%></span>
+                  <span><%=done[i].cream%></span>
+                  <span><%=done[i].flavor%></span>
+                  <span><%=done[i].completed%></span>
+                  <span><i class="fa-solid fa-circle-check"></i></span>
+                   <span><i class="fa fa-ban" aria-hidden="true"></i></span> -->
+                <!-- </section>
+              <%}%>
+            </div>
+    </div> --> 
+  </div> 
+  
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
